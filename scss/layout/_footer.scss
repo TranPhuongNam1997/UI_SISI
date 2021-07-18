@@ -2,28 +2,35 @@
 // Layout :: Footer
 // ======================================================
 
-#back-to-top{
+.back-to-top{
   position: fixed;
   bottom: 25px;
-  right: 25px;
-  width: 31px;
-  height: 31px;
-  background: $c-bl;
-  color: #fff;
+  right: -45px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #007659;
   text-align: center;
-  line-height: 31px;
+  line-height: 36px;
   font-size: 18px;
   font-weight: bold;
   background-size: 100% 100%;
-  display: none;
   z-index: 100;
-  border-radius: 7px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  border: 2px dashed #007659;
+  &.active{
+    right: 25px;
+    transition: all 0.3s ease-in-out;
+
+  }
   &:hover{
-    background: rgb(8, 51, 107);
+    border: 2px dashed $c-dark;
+    color: $c-dark;
   }
 }
 

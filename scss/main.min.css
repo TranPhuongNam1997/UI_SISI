@@ -1173,7 +1173,6 @@ body {
       line-height: 16px; } }
 
 #wrapper {
-  background: #fff;
   min-height: 100vh;
   height: 100%; }
 
@@ -1197,6 +1196,9 @@ input:focus {
 .title-sc-block {
   margin-bottom: 40px;
   text-align: center; }
+
+.container.pt-100 {
+  padding-top: 100px; }
 
 .container {
   max-width: 1320px;
@@ -1265,7 +1267,7 @@ input:focus {
     background-color: transparent;
     border: 0;
     transition: all .2s ease-in-out;
-    font-weight: 600; }
+    font-weight: 500; }
     .menu-child > li > a i {
       color: #343f52; }
     .menu-child > li > a:hover {
@@ -1281,7 +1283,7 @@ input:focus {
   transition: all 0.2s ease-out;
   padding-top: 10px;
   display: block;
-  top: 101%;
+  top: 95%;
   left: 0px;
   margin-left: 0px;
   margin-top: 0px;
@@ -1333,7 +1335,7 @@ input:focus {
     left: 50% !important;
     transform: translateX(-50%) !important;
     top: 100% !important;
-    margin-top: 38px;
+    margin-top: 27px;
     padding: .65rem 0;
     position: absolute;
     min-width: auto; }
@@ -1369,7 +1371,7 @@ input:focus {
     visibility: visible;
     transform: translateY(20px);
     transition: all 0.2s ease-in;
-    margin-top: 38px;
+    margin-top: 27px;
     position: absolute;
     top: 100%;
     right: -17px;
@@ -1447,7 +1449,8 @@ input:focus {
   animation-name: fadeInRight; }
 
 .banner {
-  background: #E9F8F8; }
+  background: url("../img/shape-45.png") no-repeat left bottom, url("../img/shape-46.png") no-repeat right top;
+  background-color: #E9F8F8; }
 
 .flex-banner {
   padding: 50px 0;
@@ -1500,9 +1503,6 @@ input:focus {
 .swiper-pagination-bullet {
   width: 14px;
   border-radius: 6px; }
-
-.utilities {
-  background: url("../img/shape-3.png") no-repeat left top, url("../img/shape-4.png") no-repeat right top; }
 
 .tilte-sc {
   font-size: 38px;
@@ -1601,6 +1601,7 @@ input:focus {
     background-image: linear-gradient(to right, #017759 0%, #1ea434 51%, #00d4ff 100%); }
 
 .product-services {
+  background: url("../img/shape-7.png") no-repeat top right, url("../img/shape-6.png") no-repeat left bottom;
   background-color: #E9F8F8; }
 
 .box-product {
@@ -1621,11 +1622,24 @@ input:focus {
   .box-product .title-product {
     font-weight: 700;
     font-size: 21px;
-    margin-bottom: 20px; }
+    margin-bottom: 20px;
+    color: #007659; }
   .box-product .list-services {
     margin-bottom: 40px; }
-    .box-product .list-services li {
-      margin-bottom: 10px; }
+    .box-product .list-services li:hover a {
+      transform: translateX(10px);
+      transition: all 0.3s ease-in-out;
+      color: #007659; }
+    .box-product .list-services li a {
+      font-size: 17px;
+      display: block;
+      transition: all 0.3s ease-in-out;
+      padding: 10px 0; }
+      .box-product .list-services li a i {
+        margin-right: 8px;
+        font-size: 17px;
+        font-weight: 600;
+        color: #007659; }
   .box-product .view-detail {
     position: relative;
     display: inline-block;
@@ -1646,28 +1660,127 @@ input:focus {
       color: #fff;
       transition: all 500ms ease; }
 
-#back-to-top {
+.box-trading {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0.25rem 0.75rem rgba(30, 34, 40, 0.15);
+  border-radius: 20px;
+  padding: 40px;
+  transition: all 0.3s ease-in-out; }
+  .box-trading:hover {
+    color: #007659;
+    box-shadow: 0 0.55rem 0.75rem rgba(30, 34, 40, 0.15);
+    transition: all 0.3s ease-in-out; }
+    .box-trading:hover .title-trading {
+      transition: all 0.3s ease-in-out; }
+    .box-trading:hover .box-trading-img:before {
+      content: '';
+      transform: scale(1, 1); }
+    .box-trading:hover .box-trading-img img:first-child {
+      display: none; }
+    .box-trading:hover .box-trading-img img:last-child {
+      display: block; }
+
+.box-trading-img {
+  background: #EDF2F7;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  position: relative; }
+  .box-trading-img:before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: scale(0, 0);
+    transition: all 500ms ease;
+    background: #007659; }
+  .box-trading-img img {
+    width: 40px;
+    z-index: 1; }
+    .box-trading-img img:first-child {
+      display: block; }
+    .box-trading-img img:last-child {
+      display: none; }
+
+.box-trading-text .title-trading {
+  display: block;
+  line-height: 26px;
+  font-weight: 700;
+  margin-bottom: 9px;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out; }
+.box-trading-text .sub-trading {
+  font-size: 16px;
+  color: #343f52; }
+
+.account {
+  background: url("../img/shape-50.png") no-repeat left 12% center, url("../img/shape-50.png") no-repeat right center;
+  background-color: #22b6af; }
+  .account .tilte-sc {
+    color: #fff;
+    text-align: left;
+    margin: 0; }
+
+.flex-acount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.btn-openac {
+  padding: 19px 51px 20px 51px;
+  border-radius: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-size: 17px;
+  line-height: 25px;
+  font-weight: 600;
+  background: #fff;
+  z-index: 1;
+  transition: all 500ms ease; }
+  .btn-openac:hover {
+    color: #007659;
+    transform: translateY(-0.15rem);
+    box-shadow: 0 0.25rem 0.75rem rgba(30, 34, 40, 0.15); }
+
+.back-to-top {
   position: fixed;
   bottom: 25px;
-  right: 25px;
-  width: 31px;
-  height: 31px;
-  background: #2E70EC;
-  color: #fff;
+  right: -45px;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #007659;
   text-align: center;
-  line-height: 31px;
+  line-height: 36px;
   font-size: 18px;
   font-weight: bold;
   background-size: 100% 100%;
-  display: none;
   z-index: 100;
-  border-radius: 7px;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -ms-border-radius: 7px;
-  -o-border-radius: 7px; }
-  #back-to-top:hover {
-    background: #08336b; }
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  border: 2px dashed #007659; }
+  .back-to-top.active {
+    right: 25px;
+    transition: all 0.3s ease-in-out; }
+  .back-to-top:hover {
+    border: 2px dashed #343f52;
+    color: #343f52; }
 
 .btn-lightblue {
   color: #1877f2;
